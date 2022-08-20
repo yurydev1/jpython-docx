@@ -56,11 +56,7 @@ CLASSIFIERS = [
     "Topic :: Software Development :: Libraries",
 ]
 
-<<<<<<< HEAD
-LONG_DESCRIPTION = text_of('DESCRIPTION.rst') + '\n\n' + text_of('HISTORY.rst')
-=======
 LONG_DESCRIPTION = text_of("README.rst") + "\n\n" + text_of("HISTORY.rst")
->>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 
 ZIP_SAFE = False
 
