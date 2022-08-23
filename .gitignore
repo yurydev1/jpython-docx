@@ -13,3 +13,4 @@ Session.vim
 /docs/
 /ref/
 .idea
+.pypirc

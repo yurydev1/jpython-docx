@@ -753,6 +753,9 @@ class _OxmlElementBase(etree.ElementBase):
     def _nsptag(self):
         return NamespacePrefixedTag.from_clark_name(self.tag)
 
+    def __dict__(self):
+        # __dict__ is required for debuggers to show the content of objects when running Python 3.8+
+        return None
 
 BaseOxmlElement = MetaOxmlElement(
     'BaseOxmlElement', (etree.ElementBase,), dict(_OxmlElementBase.__dict__)

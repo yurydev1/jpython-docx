@@ -11,13 +11,13 @@ class Comment(Parented):
         self._com = self._element = self.element = com
     
     @property
-    def paragraph(self):
-        return self.element.paragraph
+    def paragraphs(self):
+        return self.element.paragraphs
     
     @property
     def text(self):
-        return self.element.paragraph.text
+        return '\n'.join([p.text for p in self.element.paragraphs])
     
     @text.setter
     def text(self, text):
-        self.element.paragraph.text = text
+        self.element.paragraphs.text = text

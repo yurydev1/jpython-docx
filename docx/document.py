@@ -11,6 +11,7 @@ from docx.enum.section import WD_SECTION
 from docx.enum.text import WD_BREAK
 from docx.section import Section, Sections
 from docx.shared import ElementProxy, Emu
+from docx.text.comment import Comment
 
 
 class Document(ElementProxy):
@@ -183,6 +184,12 @@ class Document(ElementProxy):
         ``<w:ins>`` or ``<w:del>`` will also not appear in the list.
         """
         return self._body.tables
+
+    @property
+    def comments(self):
+        comment_part = self.part._comments_part.element
+        coms = [com for com in comment_part]
+        return [Comment(com, comment_part) for com in coms]
 
     @property
     def elements(self):
