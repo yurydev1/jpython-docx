@@ -1,17 +1,17 @@
 Bayoo-docx
 ==========
 
-Python library forked from  `python-docx <github.com/python-openxml/python-docx/>`_.
+Python library forked from  `bayoo-docx <github.com/BayooG/bayoo-docx/>`_.
 
-The main purpose of the fork was to add implementation for comments and footnotes to the library
+The main purpose of the fork was to extend comment functionality introduced in bayoo-docx
 
 Installation
 ------------
 
-Use the package manager `pip <pypi.org/project/bayoo-docx/>`_ to install bayoo-docx.
+Use the package manager `pip <pypi.org/project/jpyhon-docx/>`_ to install jpython-docx.
 
 
-`pip install bayoo-docx`
+`pip install jpython-docx`
 
 Usage
 -----
@@ -21,29 +21,16 @@ Usage
     import docx
     
     document = docx.Document()
+    for comment in document.comments:
+        print(comment)
 
-    paragraph1 = document.add_paragraph('text') # create new paragraph
-
-    comment = paragraph.add_comment('comment',author='Obay Daba',initials= 'od') # add a comment on the entire paragraph
-
-    paragraph2 = document.add_paragraph('text') # create another paragraph
-
-    run = paragraph2.add_run('texty') add a run to the paragraph
-
-    run.add_comment('comment') # add a comment only for the run text 
-
-    run.add_comment('comment2')
-
-    run_comments = run.comments
-
-    paragraph.add_footnote('footnote text') # add a footnote
 
 
 Donation
 ------------
 ::
 
-    bitcoin: bc1q9dftn4ndufwzyzkm8ryu0kky0v8y7w00zdah9r
+    bitcoin: xxxxx
 
 
 License

@@ -11,6 +11,21 @@ from .xmlchemy import (
     BaseOxmlElement, OneAndOnlyOne, RequiredAttribute, ZeroOrMore, ZeroOrOne
 )
 
+# files:
+#  - word/settings.xml
+#     - rsids:        Specifies a unique identifier used to track the editing session when the section mark for this section was added to the document.
+#                     All rsid* attributes throughout this document of an equal value, if present, shall indicate that those regions were modified during the same editing session.
+#                     A producer may choose to increment the revision save ID value to indicate subsequent editing sessions to indicate the order of the saves performed.
+#  - word/commentsIds.xml, https://learn.microsoft.com/en-us/openspecs/office_standards/ms-docx/9c360cd7-653f-4d82-82be-7bda2488c0c1
+#     - durableId:    specifies the identifier for the associated comment
+#     - paraId:       specifies the paraId (section 2.6.2.3) of the last paragraph of the associated comment
+#  - word/commentsExtended.xml
+#     - done:         specifies whether the comment has been addressed (0 or 1)
+#     - paraId:       specifies the paraId (section 2.6.2.3) of the last paragraph of the associated comment
+#  - word/commentsExtensible.xml
+#     - dateUtc:      some dateUtc
+#     - durableId:    specifies the identifier for the associated comment
+
 class CT_Com(BaseOxmlElement):
     """
     A ``<w:comment>`` element, a container for Comment properties
